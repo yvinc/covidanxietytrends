@@ -9,6 +9,7 @@
 #' @return None (saves the plot to a file).
 #' @importFrom GGally ggpairs
 #' @importFrom ggplot2 ggsave theme ggtitle element_text aes
+#' @export
 #' @examples
 #' data <- data.frame(a = rnorm(10), b = rnorm(10))
 #' temp_file <- tempfile(fileext = ".png")
