@@ -9,6 +9,38 @@
 #' @importFrom readr write_csv
 #' @return returns a table with the R^2 and RMSE values
 #' @export
+#' @examples
+#' # Create sample training and test data
+#' train_data <- data.frame(
+#'   date = as.numeric(as.Date("2020-01-01") + 0:3),
+#'   search_trends_anxiety = c(10, 12, 15, 14),
+#'   new_persons_vaccinated = c(1000, 1200, 1300, 1100),
+#'   new_hospitalized_patients = c(50, 60, 55, 65),
+#'   new_confirmed = c(100, 120, 130, 110),
+#'   new_intensive_care_patients = c(10, 12, 15, 13)
+#' )
+#' test_data <- data.frame(
+#'   date = as.numeric(as.Date("2020-01-05") + 0:1),
+#'   search_trends_anxiety = c(16, 18),
+#'   new_persons_vaccinated = c(1400, 1500),
+#'   new_hospitalized_patients = c(70, 75),
+#'   new_confirmed = c(140, 150),
+#'   new_intensive_care_patients = c(14, 16)
+#' )
+#'
+#' # Fit a model
+#' model <- lm(search_trends_anxiety ~ new_persons_vaccinated + new_hospitalized_patients + date,
+#'             data = train_data)
+#'
+#' # Compute metrics
+#' metrics <- model_predictions(model, test_data, tempfile(fileext = ".csv"))
+#' print(metrics)
+#'
+#' \dontrun{
+#' # Save metrics to a file
+#' model_predictions(model, test_data, "model_metrics.csv")
+#' }
+
 model_predictions <- function(final_model, test_df, output_file) {
     # Input validation
     required_cols <- c("date", "search_trends_anxiety", "new_persons_vaccinated",

@@ -4,10 +4,31 @@
 #'
 #' @param raw_df The unprocessed COVID dataset
 #' @param processed_df The cleaned/processed COVID dataset
-#'
+#' @importFrom dplyr %>% summarise across where mutate inner_join
+#' @importFrom tidyr pivot_longer pivot_wider everything
+#' @importFrom stats median quantile
+#' @importFrom lubridate as_date
+#' @importFrom tibble tibble
 #' @return A data frame with summary statistics and missing data counts
 #' @export
+#' @examples
+#' # Create sample raw and processed data
+#' raw_data <- data.frame(
+#'   date = as.Date("2020-01-01") + 0:2,
+#'   search_trends_anxiety = c(10, NA, 20),
+#'   new_confirmed = c(100, 120, NA)
+#' )
+#' processed_data <- data.frame(
+#'   date = as.Date("2020-01-01") + 0:1,
+#'   search_trends_anxiety = c(10, 15),
+#'   new_confirmed = c(100, 120)
+#' )
+#'
+
 summarize_covid_data <- function(raw_df, processed_df) {
+  # Suppress R CMD check notes for variables created by pivot_longer
+  Statistic <- value <- NULL
+
   covid_summary <- processed_df|>
     summarise(across(where(is.numeric), list(
       Min = min,
@@ -30,6 +51,7 @@ summarize_covid_data <- function(raw_df, processed_df) {
     Q75 = quantile(dates_day, 0.75),
     Max = max(dates_day)
   )|> mutate(across(where(is.numeric), as_date))
+
 
   table_summary <- rbind(covid_summary, date_summary)
 

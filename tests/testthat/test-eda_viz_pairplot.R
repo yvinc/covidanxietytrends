@@ -53,10 +53,11 @@ test_that("create_pairs_plot handles missing values", {
   )
   output_file <- tempfile(fileext = ".png")
 
-  # Allow and expect warning, but should be no error
-  expect_warning(
-    create_pairs_plot(test_data, output_file),
-    regexp = "Removed.*rows.*missing values")  # Optional: match specific warning
+  # Capture warnings while running the function
+  warnings <- capture_warnings(create_pairs_plot(test_data, output_file))
+
+  # Check that at least one warning matches the expected pattern
+  expect_true(any(grepl("Removed.*rows.*missing values", warnings)))
 
   # Check if file exists
   expect_true(file.exists(output_file))

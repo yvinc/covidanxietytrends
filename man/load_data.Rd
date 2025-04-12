@@ -13,5 +13,24 @@ load_data(file_path)
 A tibble with the loaded data
 }
 \description{
-Simplified reading
+This function takes the path to the raw US COVID-19 tabular data and loads the data.
+}
+\examples{
+\dontrun{
+# Create a temporary CSV file with sample data
+temp_file <- tempfile(fileext = ".csv")
+sample_data <- data.frame(
+  date = as.Date("2020-01-01") + 0:2,
+  search_trends_anxiety = c(10, 15, 20),
+  new_confirmed = c(100, 120, 150)
+)
+readr::write_csv(sample_data, temp_file)
+
+# Load the data
+data <- load_data(temp_file)
+print(data)
+
+# Clean up
+unlink(temp_file)
+}
 }

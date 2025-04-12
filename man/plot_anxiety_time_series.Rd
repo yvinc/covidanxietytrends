@@ -17,3 +17,19 @@ A ggplot object
 \description{
 Plot anxiety search trends over time
 }
+\examples{
+# Create sample data
+sample_data <- data.frame(
+  date = as.Date("2020-01-01") + 0:2,
+  search_trends_anxiety = c(10, 15, 20)
+)
+
+# Create the plot
+plot <- plot_anxiety_time_series(sample_data, tempfile(fileext = ".png"))
+print(plot)
+
+\dontrun{
+# Save the plot to a file
+plot_anxiety_time_series(sample_data, "anxiety_trends.png")
+}
+}
