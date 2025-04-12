@@ -19,4 +19,14 @@ Compute Summary Statistic for Numeric Columns
 \examples{
 # data <- data.frame(a = c(1,2,3), b = c(4,5,6))
 # summarize_numeric(data)
+# Create sample data
+sample_data <- data.frame(
+  search_trends_anxiety = c(10, 12, 15),
+  new_confirmed = c(100, 120, 130),
+  non_numeric = c("a", "b", "c")
+)
+
+# Summarize numeric columns
+summary_stats <- summarize_numeric(sample_data)
+print(summary_stats)
 }

@@ -11,6 +11,16 @@
 #' @importFrom leaps regsubsets
 #' @importFrom tibble as_tibble tibble
 #' @export
+#' @examples
+#' # Create sample data
+#' sample_data <- data.frame(
+#'   date = as.Date("2020-01-01") + 0:4,
+#'   search_trends_anxiety = c(10, 12, 15, 14, 16),
+#'   new_persons_vaccinated = c(1000, 1200, 1300, 1100, 1400),
+#'   new_hospitalized_patients = c(50, 60, 55, 65, 70),
+#'   new_confirmed = c(100, 120, 130, 110, 140),
+#'   new_intensive_care_patients = c(10, 12, 15, 13, 14))
+
 feature_selection <- function(df, nvmax = 5) {
   # Validate input
   required_cols <- c("date",

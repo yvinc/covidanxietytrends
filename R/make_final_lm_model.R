@@ -9,6 +9,21 @@
 #' @importFrom stats lm
 #' @return returns the final regression model from our results
 #' @export
+#' @examples
+#' # Create sample data
+#' sample_data <- data.frame(
+#'   date = as.Date("2020-01-01") + 0:3,
+#'   search_trends_anxiety = c(10, 12, 15, 14),
+#'   new_persons_vaccinated = c(1000, 1200, 1300, 1100),
+#'   new_hospitalized_patients = c(50, 60, 55, 65),
+#'   new_confirmed = c(100, 120, 130, 110),
+#'   new_intensive_care_patients = c(10, 12, 15, 13)
+#' )
+#'
+#' # Fit the model
+#' model <- make_final_lm_model(sample_data)
+#' summary(model)
+
 make_final_lm_model <- function(df) {
 
     # Input validation

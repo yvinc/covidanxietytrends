@@ -17,3 +17,17 @@ A data frame with summary statistics and missing data counts
 \description{
 Generates summary statistics and missing data counts from the raw and processed COVID datasets.
 }
+\examples{
+# Create sample raw and processed data
+raw_data <- data.frame(
+  date = as.Date("2020-01-01") + 0:2,
+  search_trends_anxiety = c(10, NA, 20),
+  new_confirmed = c(100, 120, NA)
+)
+processed_data <- data.frame(
+  date = as.Date("2020-01-01") + 0:1,
+  search_trends_anxiety = c(10, 15),
+  new_confirmed = c(100, 120)
+)
+
+}

@@ -12,6 +12,17 @@
 #' @importFrom tidyr pivot_longer pivot_wider
 #' @importFrom stats quantile median
 #' @export
+#' @examples
+#' # Create sample data
+#' sample_data <- data.frame(
+#'   search_trends_anxiety = c(10, 12, 15),
+#'   new_confirmed = c(100, 120, 130),
+#'   non_numeric = c("a", "b", "c")
+#' )
+#'
+#' # Summarize numeric columns
+#' summary_stats <- summarize_numeric(sample_data)
+#' print(summary_stats)
 
 summarize_numeric <- function(data) {
   requireNamespace("dplyr", quietly = TRUE) # requireNamespace allows for :: operator
