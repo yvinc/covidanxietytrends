@@ -9,6 +9,8 @@ The `covidanxietytrends` R package provides tools to analyze relationships betwe
 
 ## Installation
 Install the development version from GitHub:
+> Dependency package `devtools` is required to use `install_github()`.
+> Please use `install.packages("devtools")` to first install the `devtools` library, then run the following code in R:
 
 ``` r
 # install.packages("devtools")
