@@ -22,6 +22,8 @@ None (saves the plot to a file).
 Generates a pairs plot for all variables in the dataset using ggpairs and saves it to a file.
 }
 \examples{
+\dontrun{
 data <- data.frame(a = 1:3, b = 4:6)
 create_pairs_plot(data, "pairs_plot.png")
+}
 }

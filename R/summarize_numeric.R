@@ -8,12 +8,15 @@
 #' @examples
 #' # data <- data.frame(a = c(1,2,3), b = c(4,5,6))
 #' # summarize_numeric(data)
+#' @importFrom dplyr summarize across where everything
+#' @importFrom tidyr pivot_longer pivot_wider
+#' @importFrom stats quantile median
 #' @export
 
 summarize_numeric <- function(data) {
   requireNamespace("dplyr", quietly = TRUE) # requireNamespace allows for :: operator
   requireNamespace("tidyr", quietly = TRUE)
-
+  Statistic <- value <- NULL
   data |>
     dplyr::summarize(dplyr::across(dplyr::where(is.numeric), list(
       Min = ~min(.x, na.rm = TRUE),

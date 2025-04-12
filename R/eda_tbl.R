@@ -4,10 +4,17 @@
 #'
 #' @param raw_df The unprocessed COVID dataset
 #' @param processed_df The cleaned/processed COVID dataset
-#'
+#' @importFrom dplyr %>% summarise across where mutate inner_join
+#' @importFrom tidyr pivot_longer pivot_wider everything
+#' @importFrom stats median quantile
+#' @importFrom lubridate as_date
+#' @importFrom tibble tibble
 #' @return A data frame with summary statistics and missing data counts
 #' @export
 summarize_covid_data <- function(raw_df, processed_df) {
+  # Suppress R CMD check notes for variables created by pivot_longer
+  Statistic <- value <- NULL
+
   covid_summary <- processed_df %>%
     summarise(across(where(is.numeric), list(
       Min = min,

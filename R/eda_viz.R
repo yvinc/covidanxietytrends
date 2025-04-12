@@ -3,10 +3,10 @@
 #' @param df A data frame with at least `date` and `search_trends_anxiety` columns
 #' @param output_file Path to save the output figure.
 #' @return A ggplot object
-#' @importFrom ggplot2 ggplot aes geom_line labs theme element_text ggsave
+#' @importFrom ggplot2 ggplot aes_string geom_line labs theme element_text ggsave
 #' @export
 plot_anxiety_time_series <- function(df, output_file) {
-  plot <- ggplot(df, aes(x = date, y = search_trends_anxiety)) +
+  plot <- ggplot(df, aes_string(x = "date", y = "search_trends_anxiety")) +
     geom_line(color = "cornflower blue") +
     labs(
       title = "Google Searches Regarding Anxiety over Time",
