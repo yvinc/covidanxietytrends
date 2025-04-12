@@ -1,4 +1,3 @@
-library(here)
 test_that("clean_covid_data selects correct columns and removes NAs", {
   sample_df <- data.frame(
     date = as.Date(c("2020-01-01", "2020-01-02")),

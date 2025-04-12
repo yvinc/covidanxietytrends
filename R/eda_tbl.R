@@ -8,7 +8,7 @@
 #' @return A data frame with summary statistics and missing data counts
 #' @export
 summarize_covid_data <- function(raw_df, processed_df) {
-  covid_summary <- processed_df %>%
+  covid_summary <- processed_df|>
     summarise(across(where(is.numeric), list(
       Min = min,
       Q25 = ~quantile(.x, 0.25),
@@ -16,8 +16,8 @@ summarize_covid_data <- function(raw_df, processed_df) {
       Median = median,
       Q75 = ~quantile(.x, 0.75),
       Max = max
-    ), .names = "{.col}_{.fn}")) %>%
-    pivot_longer(cols = everything(), names_to = c("Variable", "Statistic"), names_sep = "_(?=[^_]+$)") %>%
+    ), .names = "{.col}_{.fn}"))|>
+    pivot_longer(cols = everything(), names_to = c("Variable", "Statistic"), names_sep = "_(?=[^_]+$)")|>
     pivot_wider(names_from = Statistic, values_from = value)
 
   dates_day <- as.numeric(processed_df$date)
@@ -29,7 +29,7 @@ summarize_covid_data <- function(raw_df, processed_df) {
     Median = median(dates_day),
     Q75 = quantile(dates_day, 0.75),
     Max = max(dates_day)
-  ) %>% mutate(across(where(is.numeric), as_date))
+  )|> mutate(across(where(is.numeric), as_date))
 
   table_summary <- rbind(covid_summary, date_summary)
 

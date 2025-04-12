@@ -11,8 +11,10 @@
 #' @importFrom GGally ggpairs
 #' @importFrom ggplot2 ggplot aes theme element_text ggtitle ggsave
 #' @examples
+#' \dontrun{
 #' data <- data.frame(a = 1:3, b = 4:6)
 #' create_pairs_plot(data, "pairs_plot.png")
+#' }
 create_pairs_plot <- function(data, output_file, width = 16, height = 12) {
   options(repr.plot.width = width, repr.plot.height = height)
 

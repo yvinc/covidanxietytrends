@@ -2,8 +2,6 @@ library(tibble)
 library(dplyr)
 library(tidyr)
 library(lubridate)
-library(here)
-
 
 test_that("summarize_covid_data outputs a complete summary table", {
   raw <- tibble(

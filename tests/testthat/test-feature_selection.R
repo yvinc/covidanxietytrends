@@ -1,7 +1,5 @@
 suppressWarnings({
   library(testthat)
-  library(here)
-  library(tidyverse)
   library(leaps)
 })
 
