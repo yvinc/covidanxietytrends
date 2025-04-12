@@ -1,17 +1,27 @@
 Package: covidanxietytrends
-Title: What the Package Does (One Line, Title Case)
+Title: Analyze Correlations Between COVID-19 Metrics and Anxiety Search Trends
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Vincy", "Huang", , "first.last@example.com", role = c("aut", "cre"))
+    person("Alina", "Hameed", , "Alina2002Hameed@gmail.com", role = c("aut", "cre"))
+    person("Charlotte", "Ren", , "first.last@example.com", role = c("aut", "cre"))
+    person("Alan", "Lee", , "first.last@example.com", role = c("aut", "cre"))
+Description: Provides tools to analyze relationships between COVID-19 public health 
+    metrics (hospitalizations, vaccinations) and anxiety-related Google search trends. 
+    Includes functions for data cleaning, feature selection, and visualization.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports:
     GGally,
-    ggplot2
-Suggests: 
+    ggplot2,
+    leaps,
+    tibble,
+    tidyr,
+    tidymodels
+Suggests:
+    covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://github.com/DSCI-310-2025/covidanxietytrends
