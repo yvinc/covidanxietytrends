@@ -5,7 +5,6 @@ suppressWarnings({
   library(leaps)
 })
 
-source(here("R", "feature_selection.R"))
 
 create_test_data <- function(rows = 30) {
   tibble(
@@ -21,7 +20,7 @@ create_test_data <- function(rows = 30) {
 test_that("function returns correct structure", {
   test_data <- create_test_data()
   result <- feature_selection(test_data)
-  
+
   expect_type(result, "list")
   expect_named(result, c("selected_features", "selection_summary", "performance"))
   expect_true("date" %in% names(result$selection_summary))
@@ -29,10 +28,10 @@ test_that("function returns correct structure", {
 
 test_that("parameter handling works correctly", {
   test_data <- create_test_data()
-  
+
   # Test normal nvmax values
   expect_equal(nrow(feature_selection(test_data, nvmax = 3)$performance), 3)
-  
+
   # Test nvmax larger than predictors
   expect_warning(
     result <- feature_selection(test_data, nvmax = 10),
@@ -43,11 +42,11 @@ test_that("parameter handling works correctly", {
 
 test_that("input validation works", {
   good_data <- create_test_data()
-  
+
   # Missing columns
   bad_data <- select(good_data, -new_confirmed)
   expect_error(feature_selection(bad_data), "missing required columns")
-  
+
   # NA values
   na_data <- good_data
   na_data$new_hospitalized_patients[1:3] <- NA

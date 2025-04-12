@@ -2,7 +2,7 @@ Package: covidanxietytrends
 Title: Analyze Correlations Between COVID-19 Metrics and Anxiety Search Trends
 Version: 0.0.0.9000
 Authors@R: 
-    person("Vincy", "Huang", , "first.last@example.com", role = c("aut", "cre"))
+    person("Vincy", "Huang", , "vincyxl@student.ubc.ca", role = c("aut", "cre"))
     person("Alina", "Hameed", , "Alina2002Hameed@gmail.com", role = c("aut", "cre"))
     person("Charlotte", "Ren", , "first.last@example.com", role = c("aut", "cre"))
     person("Alan", "Lee", , "first.last@example.com", role = c("aut", "cre"))
@@ -20,12 +20,20 @@ Imports:
     readr,
     stats,
     tibble,
-    tidyr
+    tidyr,
+    here,
+    Metrics,
+    leaps,
+    tidyverse,
+    broom,
+    yardstick
 Suggests:
     testthat (>= 3.0.0),
     knitr,
     rmarkdown,
-    covr
+    covr,
+    lubridate,
+    tidymodels
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 URL: https://github.com/DSCI-310-2025/covidanxietytrends

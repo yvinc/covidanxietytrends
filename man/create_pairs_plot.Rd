@@ -22,8 +22,6 @@ None (saves the plot to a file).
 Generates a pairs plot for all variables in the dataset using ggpairs and saves it to a file.
 }
 \examples{
-data <- data.frame(a = rnorm(10), b = rnorm(10))
-temp_file <- tempfile(fileext = ".png")
-on.exit(unlink(temp_file))  # this cleans up the file after the example runs
-create_pairs_plot(data, temp_file)
+data <- data.frame(a = 1:3, b = 4:6)
+create_pairs_plot(data, "pairs_plot.png")
 }

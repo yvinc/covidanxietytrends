@@ -2,28 +2,25 @@
 % Please edit documentation in R/feature_selection.R
 \name{feature_selection}
 \alias{feature_selection}
-\title{perform backward feature selection on COVID data}
+\title{Perform backward feature selection on COVID data}
 \usage{
-feature_selection(df, initial_test_size = 0.3, train_size = 0.7, nvmax = 5)
+feature_selection(df, nvmax = 5)
 }
 \arguments{
-\item{df}{Data frame containing the expected columns}
+\item{df}{Data frame containing the expected columns
+(must include date and all predictor variables)}
 
-\item{initial_test_size}{size for initial holdout set}
-
-\item{train_size}{proportion for training after holdout}
-
-\item{nvmax}{maximum number of variables to include}
+\item{nvmax}{Maximum number of variables to include (default: 5)}
 }
 \value{
-a list with:
+A list with:
 \itemize{
-\item train_data: the training set with numeric dates
-\item test_data: test set with numeric dates
-\item selected_features: character vector of selected features
-\item performance: data frame with model metrics
+\item selected_features: Character vector of selected features
+\item selection_summary: Tibble showing which variables
+were selected at each step
+\item performance: Data frame with model metrics (RSQ, RSS, ADJ.R2)
 }
 }
 \description{
-perform backward feature selection on COVID data
+Perform backward feature selection on COVID data
 }

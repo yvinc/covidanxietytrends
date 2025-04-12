@@ -1,7 +1,6 @@
 library(testthat)
 library(here)
 
-source(here("R", "load_data.R"))  # Make sure this is still at the top!
 
 test_that("load_data reads CSV files correctly", {
   test_file <- tempfile(fileext = ".csv")

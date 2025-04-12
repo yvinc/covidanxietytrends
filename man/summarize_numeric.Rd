@@ -19,5 +19,4 @@ Compute Summary Statistic for Numeric Columns
 \examples{
 # data <- data.frame(a = c(1,2,3), b = c(4,5,6))
 # summarize_numeric(data)
-
 }

@@ -1,9 +1,8 @@
 library(testthat)
 library(here)
 library(tidyverse)
-source(here("R", "make_final_lm_model.R"))
 
-# create test data 
+# create test data
 
 # incorrect dataframes
 missing_col_df <- tibble(class_labels = rep(c("date",
@@ -16,7 +15,7 @@ empty_df  <- tibble(class_labels = character(0),
 # create test dataframes
 set.seed(123)
 test_df <- data.frame(
-  date = as.Date(c("2020-01-01", "2020-01-02", "2020-01-03", 
+  date = as.Date(c("2020-01-01", "2020-01-02", "2020-01-03",
                    "2020-01-04", "2020-01-05", "2020-01-06")),
   search_trends_anxiety = c(1.2, 1.5, 1.3, 1.6, 1.1, 1.4) + rnorm(6, sd = 0.1),
   new_persons_vaccinated = c(100, 200, 150, 250, 120, 180) + rnorm(6, sd = 10),

@@ -1,6 +1,4 @@
 library(here)
-source(here("R", "clean_covid_data.R"))
-
 test_that("clean_covid_data selects correct columns and removes NAs", {
   sample_df <- data.frame(
     date = as.Date(c("2020-01-01", "2020-01-02")),
@@ -11,14 +9,14 @@ test_that("clean_covid_data selects correct columns and removes NAs", {
     new_intensive_care_patients = c(2, 3),
     irrelevant_column = c("A", "B")
   )
-  
+
   cleaned_df <- clean_covid_data(sample_df)
 
   # Check: No NAs
   expect_false(any(is.na(cleaned_df)))
 
   # Check: Correct columns retained
-  expected_cols <- c("date", "search_trends_anxiety", "new_persons_vaccinated", 
+  expected_cols <- c("date", "search_trends_anxiety", "new_persons_vaccinated",
                      "new_hospitalized_patients", "new_confirmed", "new_intensive_care_patients")
   expect_equal(colnames(cleaned_df), expected_cols)
 })
