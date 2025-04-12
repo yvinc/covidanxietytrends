@@ -1,5 +1,4 @@
 library(testthat)
-library(here)
 
 
 test_that("load_data reads CSV files correctly", {
