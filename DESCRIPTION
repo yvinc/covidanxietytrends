@@ -5,7 +5,7 @@ Authors@R:
     person("Vincy", "Huang", , "vincyxl@student.ubc.ca", role = c("aut", "cre"))
     person("Alina", "Hameed", , "Alina2002Hameed@gmail.com", role = c("aut", "cre"))
     person("Charlotte", "Ren", , "127cren@gmail.com", role = c("aut", "cre"))
-    person("Alan", "Lee", , "first.last@example.com", role = c("aut", "cre"))
+    person("Alan", "Lee", , "alanhimself@outlook.com", role = c("aut", "cre"))
 Description: Provides tools to analyze relationships between COVID-19 public health 
     metrics (hospitalizations, vaccinations) and anxiety-related Google search trends. 
     Includes functions for data cleaning, feature selection, and visualization.
