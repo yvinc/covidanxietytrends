@@ -9,7 +9,7 @@ The `covidanxietytrends` R package provides tools to analyze relationships betwe
 
 ## Installation
 Install the development version from GitHub:
-> Dependency package `devtools` is required to use `install_github()`.
+> **Dependency** package `devtools` is required to use `install_github()`.
 > Please use `install.packages("devtools")` to first install the `devtools` library, then run the following code in R:
 
 ``` r
@@ -20,11 +20,11 @@ devtools::install_github("DSCI-310-2025/covidanxietytrends")
 ## Main Functionality
 Key features include:
 
-- clean_covid_data() - Prepares raw COVID-19/anxiety trend data for analysis
-- eda_viz() - Generates time-series visualizations of anxiety trends vs COVID metrics
-- feature_selection() - Identifies significant pandemic indicators
-- make_final_lm_model() - Builds predictive linear models
-- plot_anxiety_time_series() - Creates publication-ready trend plots
+- `clean_covid_data()` - Prepares raw COVID-19/anxiety trend data for analysis
+- `eda_viz()` - Generates time-series visualizations of anxiety trends vs COVID metrics
+- `feature_selection()` - Identifies significant pandemic indicators
+- `make_final_lm_model()` - Builds predictive linear models
+- `plot_anxiety_time_series()` - Creates publication-ready trend plots
 All functions include error handling and automated testing.
 
 ## Example Usage
@@ -46,7 +46,7 @@ model <- make_final_lm_model(clean_data)
 ```
 
 ## Background 
-This package was made as a part of the circumlum for the University of British Columbia's Data Science 310 course to support our project on the correleation of COVID-19 hospitalization rates, vaccine numbers and Google search trends with the key term of anxiety. The project repository can be found [here](https://github.com/DSCI-310-2025/dsci-310-group-14). The package was developed based on the data found for the [Google COVID-19 Open Data](https://github.com/GoogleCloudPlatform/covid-19-open-data/blob/main/docs/table-vaccinations.md)
+This package was made as a part of the circumlum for the University of British Columbia's Data Science 310 course to support our project on the correleation of COVID-19 hospitalization rates, vaccine numbers and Google search trends with the key term of anxiety. The **project repository** can be found [here](https://github.com/DSCI-310-2025/dsci-310-group-14). The package was developed based on the data found for the [Google COVID-19 Open Data](https://github.com/GoogleCloudPlatform/covid-19-open-data/blob/main/docs/table-vaccinations.md)
 
 ## Testing and CI 
 - All functions include unit and integration tests using `testthat`.
