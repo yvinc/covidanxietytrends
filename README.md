@@ -1,8 +1,7 @@
 # covidanxietytrends <img src="https://img.shields.io/badge/version-0.0.0.9000-blue" align="right" />
 
 [![R-CMD-check.yaml](https://github.com/DSCI-310-2025/covidanxietytrends/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/covidanxietytrends/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/gh/DSCI-310-2025/covidanxietytrends/branch/main/graph/badge.svg)](https://codecov.io/gh/DSCI-310-2025/covidanxietytrends)
-
+[![codecov](https://codecov.io/gh/DSCI-310-2025/covidanxietytrends/graph/badge.svg?token=QU0JQ90FKB)](https://codecov.io/gh/DSCI-310-2025/covidanxietytrends)
 ## An analysis package for COVID-19 and anxiety trends correlation
 
 The `covidanxietytrends` R package provides tools to analyze relationships between COVID-19 public health metrics (hospitalizations, vaccinations) and anxiety-related Google search trends. It includes functions for data cleaning, visualization, and statistical modeling. Originally designed for the [Google COVID-19 Open Data](https://github.com/GoogleCloudPlatform/covid-19-open-data/blob/main/docs/table-vaccinations.md) vaccination dataset, its modular design allows for extension to other pandemic-related datasets.
