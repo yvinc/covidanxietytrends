@@ -1,11 +1,10 @@
 Package: covidanxietytrends
 Title: Analyze Correlations Between COVID-19 Metrics and Anxiety Search Trends
 Version: 1.0.0
-Authors@R: 
-    person("Vincy", "Huang", , "vincyxl@student.ubc.ca", role = c("aut", "cre"))
-    person("Alina", "Hameed", , "Alina2002Hameed@gmail.com", role = c("aut", "cre"))
-    person("Charlotte", "Ren", , "127cren@gmail.com", role = c("aut", "cre"))
-    person("Alan", "Lee", , "alanhimself@outlook.com", role = c("aut", "cre"))
+Authors@R: c(person(given ="Vincy",family ="Huang",, "vincyxl@student.ubc.ca", role = c("aut", "cre")),
+    person(given ="Alina",family ="Hameed",, "Alina2002Hameed@gmail.com", role = "aut"),
+    person(given ="Charlotte",family ="Ren",, "127cren@gmail.com", role = "aut"),
+    person(given ="Alan",family ="Lee",, "alanhimself@outlook.com", role = "aut"))
 Description: Provides tools to analyze relationships between COVID-19 public health 
     metrics (hospitalizations, vaccinations) and anxiety-related Google search trends. 
     Includes functions for data cleaning, feature selection, and visualization.

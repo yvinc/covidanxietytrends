@@ -1,5 +1,7 @@
-# **covidanxietytrends** <img src="https://img.shields.io/badge/version-1.0.0-blue" align="right"/>
-
+# **covidanxietytrends**
+<div style="text-align: right;">
+  [![Version: 1.0.0](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/yvinc/covidanxietytrends/releases)
+</div>
 [![R-CMD-check.yaml](https://github.com/DSCI-310-2025/covidanxietytrends/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/covidanxietytrends/actions/workflows/R-CMD-check.yaml) [![test-coverage.yaml](https://github.com/DSCI-310-2025/covidanxietytrends/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/DSCI-310-2025/covidanxietytrends/actions/workflows/test-coverage.yaml) [![codecov](https://codecov.io/gh/DSCI-310-2025/covidanxietytrends/graph/badge.svg?token=QU0JQ90FKB)](https://codecov.io/gh/DSCI-310-2025/covidanxietytrends)
 
 ## R package for COVID-19 and anxiety trends correlation analysis:
