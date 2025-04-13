@@ -1,7 +1,3 @@
-library(testthat)
-library(tidymodels)
-
-
 # utilize tempfile for test output file
 output_file <- tempfile(fileext = ".csv")
 

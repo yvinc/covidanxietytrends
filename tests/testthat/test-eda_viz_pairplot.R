@@ -1,7 +1,3 @@
-library(testthat)
-library(GGally)
-
-
 # Test 1: create_pairs_plot generates a file with valid input
 test_that("create_pairs_plot generates a file with valid input", {
   # Sample data

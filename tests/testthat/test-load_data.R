@@ -1,6 +1,3 @@
-library(testthat)
-
-
 test_that("load_data reads CSV files correctly", {
   test_file <- tempfile(fileext = ".csv")
   write.csv(data.frame(a = 1:3, b = letters[1:3]), test_file, row.names = FALSE)

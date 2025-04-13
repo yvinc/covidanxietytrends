@@ -1,9 +1,3 @@
-suppressWarnings({
-  library(testthat)
-  library(leaps)
-})
-
-
 create_test_data <- function(rows = 30) {
   tibble(
     date = seq.Date(as.Date("2020-01-01"), by = "day", length.out = rows),

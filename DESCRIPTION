@@ -36,5 +36,5 @@ Suggests:
     here,
 VignetteBuilder: knitr
 Config/testthat/edition: 3
-URL: https://github.com/DSCI-310-2025/covidanxietytrends
+URL: https://github.com/DSCI-310-2025/covidanxietytrends, https://dsci-310-2025.github.io/covidanxietytrends/
 BugReports: https://github.com/DSCI-310-2025/covidanxietytrends/issues

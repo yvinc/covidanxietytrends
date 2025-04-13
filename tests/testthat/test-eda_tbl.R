@@ -1,8 +1,3 @@
-library(tibble)
-library(dplyr)
-library(tidyr)
-library(lubridate)
-
 test_that("summarize_covid_data outputs a complete summary table", {
   raw <- tibble(
     date = as.Date(c("2020-01-01", "2020-01-02", NA)),

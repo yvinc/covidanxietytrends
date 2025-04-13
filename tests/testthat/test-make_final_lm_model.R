@@ -1,7 +1,4 @@
-library(testthat)
-
 # create test data
-
 # incorrect dataframes
 missing_col_df <- tibble(class_labels = rep(c("date",
                                                  "search_trends_anxiety"), 2),

@@ -1,5 +1,3 @@
-library(testthat)
-
 # Test 1: base test-multiple numeric columns (2 columns)
 test_that("summarize_numeric computes correct statistics for multiple columns", {
   test_data <- data.frame(a = c(1, 2, 3, 4, 5),
