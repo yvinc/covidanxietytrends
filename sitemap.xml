@@ -1,0 +1,21 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/introduction.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/clean_covid_data.html</loc></url>
+<url><loc>/reference/create_pairs_plot.html</loc></url>
+<url><loc>/reference/feature_selection.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/load_data.html</loc></url>
+<url><loc>/reference/make_final_lm_model.html</loc></url>
+<url><loc>/reference/model_predictions.html</loc></url>
+<url><loc>/reference/plot_anxiety_time_series.html</loc></url>
+<url><loc>/reference/results_lm_coef.html</loc></url>
+<url><loc>/reference/summarize_covid_data.html</loc></url>
+<url><loc>/reference/summarize_numeric.html</loc></url>
+</urlset>
+
