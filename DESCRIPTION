@@ -1,6 +1,6 @@
 Package: covidanxietytrends
 Title: Analyze Correlations Between COVID-19 Metrics and Anxiety Search Trends
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person("Vincy", "Huang", , "vincyxl@student.ubc.ca", role = c("aut", "cre"))
     person("Alina", "Hameed", , "Alina2002Hameed@gmail.com", role = c("aut", "cre"))
